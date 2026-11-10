@@ -40,7 +40,7 @@ footer { margin-top: 2rem; font-size: .9rem; color: #455449; }
 
 #forge-image { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; margin: -1rem auto 1rem; }
 
-input[type="number"] { width: 4rem; padding: .25rem; font-size: 1.25rem; border: 1px solid #bdc9c2; border-radius: .25rem; width: 59%; }
-button { background: #006341; color: white; border: none; padding: .5rem 1rem; font-size: 1.25rem; font-weight: bold; border-radius: .5rem; width: 100%; cursor: pointer; }
+input[type="number"] { padding: .5rem; font-size: 1.25rem; border: 1px solid #bdc9c2; border-radius: .5rem; width: 59%; height: 3rem; }
+button { background: #006341; color: white; border: none; padding: .5rem 1rem; font-size: 1.25rem; font-weight: bold; border-radius: .5rem; width: 100%; height: 3rem; cursor: pointer; }
 #heat-button { width: 39%; }
 #reset-button { background: white; color: #006341; border: 2px solid #006341; }
