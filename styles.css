@@ -27,7 +27,7 @@ dl { margin: 0; }
 dt { margin-top: 1rem; }
 dd { margin-left: 0; margin-top: .25rem; }
 code { background: #e9f2ec; color: #004b31; padding: .2rem .4rem; border-radius: .25rem; font-size: .95rem; overflow-wrap: anywhere; }
-.note { font-size: .875rem; margin: 1.25rem 0 0; color: #455449; }
+.note { font-size: .875rem; margin: 0.5rem 0 1.25rem; color: #455449; }
 .rules { list-style: none; padding: 0; margin: 0; }
 .rules li { display: flex; gap: 1rem; padding: .5rem 0; }
 .rules strong { min-width: 4rem; }
@@ -39,3 +39,8 @@ footer { margin-top: 2rem; font-size: .9rem; color: #455449; }
 @media (max-width: 700px) { .layout { grid-template-columns: 1fr; } main { padding-top: 1.5rem; } .forge-top, .readings { padding: 1.5rem; } .message-box { margin-inline: 1.5rem; } }
 
 #forge-image { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; margin: -1rem auto 1rem; }
+
+input[type="number"] { width: 4rem; padding: .25rem; font-size: 1.25rem; border: 1px solid #bdc9c2; border-radius: .25rem; width: 59%; }
+button { background: #006341; color: white; border: none; padding: .5rem 1rem; font-size: 1.25rem; font-weight: bold; border-radius: .5rem; width: 100%; cursor: pointer; }
+#heat-button { width: 39%; }
+#reset-button { background: white; color: #006341; border: 2px solid #006341; }

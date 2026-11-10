@@ -33,7 +33,7 @@
         </div>
       </section>
       <aside aria-label="Game instructions">
-        <section class="panel">
+        <!-- <section class="panel">
           <h2>Console commands</h2>
           <p>Write each function in <code>script.js</code>, then try it in the browser console.</p>
           <dl>
@@ -42,14 +42,17 @@
             <dt><code>resetForge()</code></dt><dd>Return to 20 heat and zero swords.</dd>
           </dl>
           <p class="note">Commands work once you have built them. Refreshing resets the game.</p>
-        </section>
+        </section> -->
         <section class="panel">
-          <h2>Interactive button commands</h2>
-          <label for="heat-input">Heat to add:</label>
+          <h2>Forge controls</h2>
+          <h3>Heat to add</h3>
           <input type="number" id="heat-input" value="20" min="0" max="100">
           <button type="button" id="heat-button">Add Heat</button>
+          <p class="note">Enter a positive whole number. Maximum forge heat: 100.</p>
           <button type="button" id="sword-button">Make sword</button>
+          <p class="note">Use 30 heat to make one sword.</p>
           <button type="button" id="reset-button">Reset Forge</button>
+          <p class="note">Return to 20 heat and zero swords.</p>
         </section>
         <section class="panel">
           <h2>Know your forge</h2>
@@ -58,7 +61,7 @@
             <li><strong>30–69</strong><span>Ready to forge.</span></li>
             <li><strong>70–100</strong><span>Roaring fire. Keep crafting!</span></li>
           </ul>
-          <p class="note">Use whole-number heating amounts from 0 to 100.</p>
+          <p class="note">Each sword requires at least 30 heat.</p>
         </section>
       </aside>
     </div>
