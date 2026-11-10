@@ -71,14 +71,17 @@ function updateForge() {
 function resetForge() {
   heat = 20;
   swordsMade = 0;
-  messageDisplay.textContent = "Welcome to the forge. Add heat to begin.";
+  // messageDisplay.textContent = "Welcome to the forge. Add heat to begin.";
+  messageDisplay.textContent = "";
   updateForge();
 }
 
 function heatForge(amount) {
   heat += amount;
-  if (heat > 100) {
+  messageDisplay.textContent = `You added ${amount} heat to the forge.`;
+  if (heat >= 100) {
     heat = 100;
+    messageDisplay.textContent += "The forge is at maximum heat!";
   }
   updateForge();
 }
@@ -91,7 +94,33 @@ function makeSword() {
   } else {
     messageDisplay.textContent = "More heat needed to forge a sword.";
   }
-    updateForge();
+  updateForge();
 }
 
 resetForge();
+
+const $heatInput = document.getElementById("heat-input");
+const $heatButton = document.getElementById("heat-button");
+const $swordButton = document.getElementById("sword-button");
+const $resetButton = document.getElementById("reset-button");
+
+$heatButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const heatAmount = $heatInput.valueAsNumber;
+  if (!isNaN(heatAmount) && Number.isInteger(heatAmount) && Number.isFinite(heatAmount) && heatAmount > 0) {
+    heatForge(heatAmount);
+  } else {
+    messageDisplay.textContent = "Please enter a valid heat amount.";
+  }
+});
+
+$swordButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  makeSword();
+});
+
+$resetButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  resetForge();
+});
